@@ -204,7 +204,7 @@ The classification is recomputed on every export — no manual maintenance, no s
 
 1. **Capture once per Claude Code release.** Start the proxy, open a fresh Claude Code session pointed at it (see below), run the exporter. The archive accumulates one file per (surface, version, timestamp).
 2. **When invoking `/anthropic-skills:skill-creator`**, tell it: *"Read `~/Code/skills/_reference/cc-reference.md` first — that's how Claude Code itself structures tool descriptions and I want this skill to follow those patterns."* The canonical symlink always resolves to the latest CLI capture.
-3. **`list-tools` tells you when to recapture.** Its diff output flags Claude Code version bumps; that's the trigger to rerun the proxy and refresh the archive.
+3. **`claude-code-tools` tells you when to recapture.** Its diff output flags Claude Code version bumps; that's the trigger to rerun the proxy and refresh the archive.
 
 ## Which surface gets captured
 
